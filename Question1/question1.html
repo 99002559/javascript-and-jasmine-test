@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <script src="C:\Users\Mahavir\Desktop\assesment/common.js"></script>
+    <script src="C:\Users\Mahavir\Desktop\assesment/classes"></script>
+    <script>
+        function func(){
+            alert('User Successfully Registered');
+            let name = $("username").value;
+            
+            let emailaddress = $("emailaddress").value;
+            let telephonenumber = $("telephonenumber").value;
+            let billingdate = $("billingdate").value;
+            let billingamount = $("billingamount").value;
+            let userObj = new user(name, emailaddress,telephonenumber,billingdate,billingamount);
+            let text = ("Name:"+ name "emailaddress:"+ emailaddress + "telephonenumber:"telephonenumber +"billingdate:"+billingdate +"billing amount:"+billingamount );
+            
+        }
+    </script>
+    
+    
+    <style>
+        body{
+            background-color: bisque;
+        }
+        h1{
+            background-color:#373a40;
+           
+            color: white;
+            text-align: center;
+            /*padding: 30;*/
+            margin: 0px;  
+        }
+        a{
+            width: 10px;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FORM</h1>
+    
+        <form align="center">
+            <p>Enter your name: <input type="text" placeholder="username" id="username"></p>    
+           
+            <p>Enter your email address: <input type="text" placeholder="Enter the email address"id="user mail id" ></p>
+            <p>Enter your telephone: <input type="text" placeholder="Enter the telephone number"id=" telephone number" ></p>  
+            <p>billing date: <input type="date" id="dob" name="billing date">
+                      
+            <p>billing amount:<input type="text" placeholder="Enter the amount"id="amount" ></p>    
+            
+            <button type="button" onclick=func()>SUBMIT</button>
+        </form>
+  
+    <br>   
+    <div>
+        <p> Details Entered :</p>
+        <p id="printHere"></p>
+    </div>
+</body>
+</html>
